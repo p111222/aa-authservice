@@ -278,11 +278,13 @@ public class AuthController {
             System.out.println("sid"+sid+":sub:"+sub);
             // Check user existence in the database
             boolean userExists = userService.checkUserExistsBySidAndSub(sid, sub);
+            System.out.println("userExists:"+userExists);
             if (!userExists) {
+                System.out.println("Returning invalid because user does not exist.");
                 return ResponseEntity.ok().body("invalid");
             }
-
-            return ResponseEntity.ok().body("valid");
+            System.out.println("Returning valid");
+            return ResponseEntity.ok().body("valid");  
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(500).body("Internal Server Error");
