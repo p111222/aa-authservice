@@ -19,8 +19,7 @@ public class UserService {
         return userRepository.existsBySessionIdAndId(sid, sub);
     }
 
-     public Optional<User> findById(String id) {
+    public Optional<User> findById(String id) {
         return userRepository.findById(id);
     }
 }
-

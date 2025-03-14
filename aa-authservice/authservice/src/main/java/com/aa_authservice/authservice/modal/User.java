@@ -22,14 +22,18 @@ public class User {
     @Column(name = "sessionId")
     private String sessionId;
 
+    @Column(name = "roles")  // New column to store roles as a comma-separated string
+    private String roles;
+
     public User() {
     }
 
-    public User(String id, String userName, String userEmail, String sessionId) {
+    public User(String id, String userName, String userEmail, String sessionId, String roles) {
         this.id = id;
         this.userName = userName;
         this.userEmail = userEmail;
         this.sessionId = sessionId;
+        this.roles = roles;
     }
 
     public String getId() {
@@ -62,5 +66,13 @@ public class User {
 
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 }

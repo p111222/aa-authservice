@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AuthserviceApplication",
+            "request": "launch",
+            "mainClass": "com.aa_authservice.authservice.AuthserviceApplication",
+            "projectName": "authservice",
+            "env": {
+                "keyCloakUrl":"http://ec2-user@ec2-13-200-189-76.ap-south-1.compute.amazonaws.com:8347",
+                "SECRET_KEY": "60191d04-bd25-483c-a3fe-282d5f6b"
+            }
+        }
+    ]
+}
