@@ -48,6 +48,9 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RestTemplate restTemplate;
+
     final String ALGORITHM = "AES";
     final String TRANSFORMATION = "AES/CBC/PKCS5Padding";
     final int IV_SIZE = 16;
@@ -276,7 +279,7 @@ public class AuthController {
             System.out.println("Refresh Token: " + refreshToken);
 
             // Prepare the Keycloak logout request
-            RestTemplate restTemplate = new RestTemplate();
+            // RestTemplate restTemplate = new RestTemplate();
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -475,7 +478,7 @@ public class AuthController {
 
         String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
 
-        RestTemplate restTemplate = new RestTemplate();
+        // RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 

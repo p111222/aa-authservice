@@ -5,3 +5,4 @@ com\aa_authservice\authservice\config\WebConfig.class
 com\aa_authservice\authservice\modal\User.class
 com\aa_authservice\authservice\controller\AuthController.class
 com\aa_authservice\authservice\repository\UserRepository.class
+com\aa_authservice\authservice\RestTemplateConfig\RestTemplateConfig.class
