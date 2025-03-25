@@ -1,6 +1,7 @@
 com\aa_authservice\authservice\AuthserviceApplication.class
 com\aa_authservice\authservice\dto\EncryptedRequest.class
 com\aa_authservice\authservice\service\UserService.class
+com\aa_authservice\authservice\config\WebConfig.class
 com\aa_authservice\authservice\modal\User.class
 com\aa_authservice\authservice\controller\AuthController.class
 com\aa_authservice\authservice\repository\UserRepository.class

@@ -288,7 +288,7 @@ public class AuthController {
 
             // Send the logout request to Keycloak
             ResponseEntity<String> keycloakResponse = restTemplate.exchange(
-                    "http://api.kriate.co.in:8346/realms/master/protocol/openid-connect/logout",
+                    "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
                     HttpMethod.POST,
                     entity,
                     String.class);
@@ -473,7 +473,7 @@ public class AuthController {
         }
         System.out.println("in regenerate");
 
-        String url = "http://api.kriate.co.in:8346/realms/master/protocol/openid-connect/token";
+        String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
 
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
