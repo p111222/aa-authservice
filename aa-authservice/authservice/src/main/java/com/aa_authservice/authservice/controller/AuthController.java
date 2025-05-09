@@ -220,14 +220,14 @@ public class AuthController {
                 System.out.println("User found: " + user.getUserEmail());
             } else {
                 user = new User();
-                user.setId(sub); // Set the 'sub' as the ID in the database
+                user.setId(sub);
                 user.setUserEmail(email);
                 user.setUserName(userName);
                 System.out.println("New user created: " + email);
             }
 
             user.setSessionId(sessionId);
-            user.setRoles(String.join(",", roles)); // Store roles as a comma-separated string
+            user.setRoles(String.join(",", roles)); 
             userRepository.save(user);
             System.out.println("Session ID and roles updated and user saved");
 
@@ -286,12 +286,13 @@ public class AuthController {
             MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
             body.add("client_id", "nishkaiv-client"); // Public client, no client_secret needed
             body.add("refresh_token", refreshToken);
-
+ 
             HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(body, headers);
 
             // Send the logout request to Keycloak
+            // "http://13.200.189.76:8080/realms/master/protocol/openid-connect/logout",
             ResponseEntity<String> keycloakResponse = restTemplate.exchange(
-                    "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
+                "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
                     HttpMethod.POST,
                     entity,
                     String.class);
@@ -477,6 +478,7 @@ public class AuthController {
         System.out.println("in regenerate");
 
         String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
+        // String url = "http://13.200.189.76:8080/realms/master/protocol/openid-connect/token";
 
         // RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
