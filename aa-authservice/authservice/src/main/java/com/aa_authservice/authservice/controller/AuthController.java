@@ -477,8 +477,8 @@ public class AuthController {
         }
         System.out.println("in regenerate");
 
-        String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
-        // String url = "http://13.200.189.76:8080/realms/master/protocol/openid-connect/token";
+        // String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
+        String url = "http://13.200.189.76:8080/realms/master/protocol/openid-connect/token";
 
         // RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
