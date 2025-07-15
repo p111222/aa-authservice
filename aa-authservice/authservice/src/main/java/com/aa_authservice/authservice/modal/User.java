@@ -6,23 +6,40 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user_master")
+// @Table(name = "user_master")
+@Table(name = "USER_MASTER")
 public class User {
 
+    // @Id
+    // @Column(name = "id")
+    // private String id;
+
+    // @Column(name = "userName", nullable = false)
+    // private String userName;
+
+    // @Column(name = "userEmail", nullable = false)
+    // private String userEmail;
+
+    // @Column(name = "sessionId")
+    // private String sessionId;
+
+    // @Column(name = "roles")
+    // private String roles;
+
     @Id
-    @Column(name = "id")
+    @Column(name = "ID")
     private String id;
 
-    @Column(name = "userName", nullable = false)
+    @Column(name = "USER_NAME", nullable = false) // Changed to USER_NAME to follow Oracle conventions
     private String userName;
 
-    @Column(name = "userEmail", nullable = false)
+    @Column(name = "USER_EMAIL", nullable = false)
     private String userEmail;
 
-    @Column(name = "sessionId")
+    @Column(name = "SESSION_ID")
     private String sessionId;
 
-    @Column(name = "roles")  // New column to store roles as a comma-separated string
+    @Column(name = "ROLES")
     private String roles;
 
     public User() {

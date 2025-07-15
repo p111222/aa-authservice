@@ -290,10 +290,10 @@ public class AuthController {
             HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(body, headers);
 
             // Send the logout request to Keycloak
-            // "http://13.200.189.76:8080/realms/master/protocol/openid-connect/logout",
+            // "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
             ResponseEntity<String> keycloakResponse = restTemplate.exchange(
-                "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
-                    HttpMethod.POST,
+                "http://13.200.189.76:8080/realms/master/protocol/openid-connect/logout",
+                HttpMethod.POST,
                     entity,
                     String.class);
 
