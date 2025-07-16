@@ -293,7 +293,7 @@ public class AuthController {
             // "https://43.204.108.73:8346/realms/master/protocol/openid-connect/logout",
             ResponseEntity<String> keycloakResponse = restTemplate.exchange(
                 // "http://13.200.189.76:8080/realms/master/protocol/openid-connect/logout",
-                "http://13.200.189.76:8900/realms/master/protocol/openid-connect/logout",
+                "https://13.200.189.76:8900/realms/master/protocol/openid-connect/logout",
                 HttpMethod.POST,
                     entity,
                     String.class);
@@ -480,7 +480,7 @@ public class AuthController {
 
         // String url = "https://43.204.108.73:8346/realms/master/protocol/openid-connect/token";
         // String url = "http://13.200.189.76:8080/realms/master/protocol/openid-connect/token";
-        String url = "http://13.200.189.76:8900/realms/master/protocol/openid-connect/token";
+        String url = "https://13.200.189.76:8900/realms/master/protocol/openid-connect/token";
 
         // RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
